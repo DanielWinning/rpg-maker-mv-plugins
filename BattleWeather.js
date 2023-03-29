@@ -1,8 +1,9 @@
 /*:
  * @plugindesc Adds weather to your side view battles.
  * @author DannyXCII
- * @help This plugin provides no help commands.
+ * @help Persists weather between the field and battles.
  */
+
 (() => {
     const parameters = PluginManager.parameters('BattleWeather'),
         oldSpritesetBattle_createLowerLayer = Spriteset_Battle.prototype.createLowerLayer;

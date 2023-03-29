@@ -1,12 +1,12 @@
 /*:
- * @plugindesc A test plugin.
+ * @plugindesc Calls a common event every time a map is loaded.
  * @author DannyXCII
  *
  * @param commonEventId
  * @desc The ID of the event you wish to call on map load.
  * @default 0
  *
- * @help This plugin does not provide any help commands.
+ * @help Provide the ID of the common event you'd like to run on map load.
  */
 
 (() => {
