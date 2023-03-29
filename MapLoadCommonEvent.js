@@ -6,7 +6,12 @@
  * @desc The ID of the event you wish to call on map load.
  * @default 0
  *
- * @help Provide the ID of the common event you'd like to run on map load.
+ * @help
+ *
+ * If you wish not to trigger the common event on specific maps,
+ * place the following in the maps notes field:
+ *
+ * <noCommonEvent:>
  */
 
 (() => {
@@ -15,7 +20,7 @@
 
    Game_Player.prototype.performTransfer = function() {
       if (this.isTransferring()) {
-         if (parameters.commonEventId !== undefined && parameters.commonEventId > 0) {
+         if (parameters.commonEventId !== undefined && parameters.commonEventId > 0 && $dataMap.meta.noCommonEvent === undefined) {
             $gameTemp.reserveCommonEvent(parameters.commonEventId);
          }
       }

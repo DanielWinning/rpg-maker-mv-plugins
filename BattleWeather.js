@@ -5,8 +5,8 @@
  */
 
 (() => {
-    const parameters = PluginManager.parameters('BattleWeather'),
-        oldSpritesetBattle_createLowerLayer = Spriteset_Battle.prototype.createLowerLayer;
+    PluginManager.parameters('BattleWeather');
+    const oldSpritesetBattle_createLowerLayer = Spriteset_Battle.prototype.createLowerLayer;
 
     Spriteset_Battle.prototype.createLowerLayer = function() {
         oldSpritesetBattle_createLowerLayer.call(this);
